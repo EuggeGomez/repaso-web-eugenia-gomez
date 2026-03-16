@@ -23,7 +23,7 @@ body::before {
     background-image: url(imagenes/avatar1.gif);
     background-size: cover;
     background-position: center;
-    filter: brightness(0.4) opacity(25);
+    filter: brightness(0.4) opacity(0.25);
     z-index: -1;
 }
 
@@ -36,16 +36,16 @@ body::before {
 
 /* ===== TARJETA DE PERFIL ===== */
 .profile-card {
-    background: rgba(161, 92, 246, 0.297);
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(161, 92, 246, 0.45) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
     border-radius: 24px;
     padding: 32px;
     border: 1px solid rgba(167, 139, 250, 0.3);
     box-shadow:
         0 20px 40px rgba(108, 40, 217, 0.721),
         0 8px 16px rgba(108, 40, 217, 0.477),
-        inset 0 1px 0 rgba(216, 180, 254, 0.863);
+        inset 0 1px 0 rgba(216, 180, 254, 0.863) !important;
     margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -64,9 +64,10 @@ body::before {
     margin-bottom: 32px;
 }
 
-/* FOTO DE PERFIL - MODIFICAR ESTILOS AQUÍ SI NECESITAS */
 .profile-image-container {
     margin-bottom: 24px;
+    position: relative;
+    display: inline-block;
 }
 
 .profile-image {
@@ -83,19 +84,13 @@ body::before {
     transform: scale(1.05);
 }
 
-.profile-image-container {
-    margin-bottom: 24px;
-    position: relative;
-    display: inline-block;
-}
-
 .profile-gif-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100px;   /* was 150px */
-    height: 100px;  /* was 150px */
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     opacity: 0;
@@ -103,7 +98,6 @@ body::before {
     transition: opacity 0.2s ease;
     z-index: 10;
 }
-
 
 .profile-image-container::after {
     content: 'Click me!';
@@ -126,20 +120,21 @@ body::before {
     opacity: 1;
 }
 
-/* INFORMACIÓN PERSONAL - MODIFICAR ESTILOS AQUÍ SI NECESITAS */
 .profile-name {
     font-size: 28px;
     font-weight: 700;
-    color: #d88ceb;
+    color: #d88ceb !important;
     margin-bottom: 8px;
     letter-spacing: 5px;
 }
+
 .profile-lastname {
     font-size: 24px;
     font-weight: 500;
-    color: rgba(58, 152, 181, 0.906);
+    color: rgba(58, 152, 181, 0.906) !important;
     margin-bottom: 16px;
 }
+
 .profile-details {
     display: flex;
     flex-direction: column;
@@ -148,7 +143,7 @@ body::before {
 
 .profile-details p {
     font-size: 16px;
-    color: rgba(198, 227, 240, 0.7);
+    color: rgba(198, 227, 240, 0.7) !important;
     font-weight: 400;
 }
 
@@ -159,7 +154,7 @@ body::before {
     gap: 12px;
     font-size: 20px;
     font-weight: 600;
-    color: #d88ceb;
+    color: #d88ceb !important;
     margin-bottom: 20px;
     padding-bottom: 8px;
     border-bottom: 2px solid rgba(167, 139, 250, 0.3);
@@ -167,25 +162,23 @@ body::before {
 
 .section-title .material-icons {
     font-size: 24px;
-    color: #d8b4fe;
-    background: rgba(139, 92, 246, 0.15);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    color: #d8b4fe !important;
+    background: rgba(139, 92, 246, 0.15) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
     border: 1px solid rgba(167, 139, 250, 0.35);
     border-radius: 10px;
     padding: 6px;
     box-shadow:
         0 4px 12px rgba(109, 40, 217, 0.2),
-        inset 0 1px 0 rgba(203, 171, 254, 0.84);
+        inset 0 1px 0 rgba(203, 171, 254, 0.84) !important;
 }
-
 
 /* ===== SECCIÓN DE HABILIDADES ===== */
 .skills-section {
     margin-bottom: 32px;
 }
 
-/* HABILIDADES - MODIFICAR ESTILOS AQUÍ SI NECESITAS */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -193,17 +186,17 @@ body::before {
 }
 
 .skill-item {
-    background: rgba(192, 97, 250, 0.064);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(100, 60, 180, 0.4) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
     padding: 16px;
     border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid rgba(116, 175, 247, 0.256);
+    border: 1px solid rgba(116, 175, 247, 0.35) !important;
     box-shadow:
         0 4px 12px rgba(4, 45, 79, 0.454),
-        inset 0 1px 0 rgba(147, 196, 253, 0.731);
+        inset 0 1px 0 rgba(147, 196, 253, 0.731) !important;
 }
 
 .skill-item:hover {
@@ -211,19 +204,19 @@ body::before {
     background: linear-gradient(135deg,
         rgba(72, 140, 249, 0.831) 0%,
         rgba(144, 101, 244, 0.71) 100%
-    );
-    border: 1px solid rgba(167, 139, 250, 0.5);
+    ) !important;
+    border: 1px solid rgba(167, 139, 250, 0.5) !important;
     box-shadow:
         0 8px 20px rgba(108, 40, 217, 0.66),
         0 4px 8px rgba(37, 162, 235, 0.694),
-        inset 0 1px 0 rgba(216, 180, 254, 0.632);
+        inset 0 1px 0 rgba(216, 180, 254, 0.632) !important;
 }
 
 .skill-name {
     font-size: 16px;
     font-weight: 500;
-    color: #5ce4e4;
-    text-shadow: 0 0 12px rgba(147, 197, 253, 0.6);
+    color: #5ce4e4 !important;
+    text-shadow: 0 0 12px rgba(147, 197, 253, 0.6) !important;
 }
 
 /* ===== SECCIONES DE FAVORITOS ===== */
@@ -231,7 +224,6 @@ body::before {
     margin-bottom: 32px;
 }
 
-/* PELÍCULAS Y DISCOS FAVORITOS - MODIFICAR ESTILOS AQUÍ SI NECESITAS */
 .favorites-list {
     display: flex;
     flex-direction: column;
@@ -239,23 +231,23 @@ body::before {
 }
 
 .favorite-item {
-    background: rgba(192, 97, 250, 0.064);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(100, 60, 180, 0.4) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
     padding: 12px 16px;
     border-radius: 8px;
     font-size: 16px;
-    color: #5ce4e4;
+    color: #5ce4e4 !important;
     font-weight: 400;
     transition: all 0.3s ease;
-    border-left: 4px solid rgba(116, 175, 247, 0.5);
-    border-top: 1px solid rgba(116, 175, 247, 0.256);
-    border-right: 1px solid rgba(116, 175, 247, 0.256);
-    border-bottom: 1px solid rgba(116, 175, 247, 0.256);
+    border-left: 4px solid rgba(116, 175, 247, 0.5) !important;
+    border-top: 1px solid rgba(116, 175, 247, 0.256) !important;
+    border-right: 1px solid rgba(116, 175, 247, 0.256) !important;
+    border-bottom: 1px solid rgba(116, 175, 247, 0.256) !important;
     box-shadow:
         0 4px 12px rgba(4, 45, 79, 0.454),
-        inset 0 1px 0 rgba(147, 196, 253, 0.731);
-    text-shadow: 0 0 12px rgba(147, 197, 253, 0.6);
+        inset 0 1px 0 rgba(147, 196, 253, 0.731) !important;
+    text-shadow: 0 0 12px rgba(147, 197, 253, 0.6) !important;
 }
 
 .favorite-item:hover {
@@ -263,20 +255,21 @@ body::before {
     background: linear-gradient(135deg,
         rgba(72, 140, 249, 0.831) 0%,
         rgba(144, 101, 244, 0.71) 100%
-    );
-    border-left: 4px solid rgba(216, 180, 254, 0.8);
-    border-top: 1px solid rgba(167, 139, 250, 0.5);
-    border-right: 1px solid rgba(167, 139, 250, 0.5);
-    border-bottom: 1px solid rgba(167, 139, 250, 0.5);
+    ) !important;
+    border-left: 4px solid rgba(216, 180, 254, 0.8) !important;
+    border-top: 1px solid rgba(167, 139, 250, 0.5) !important;
+    border-right: 1px solid rgba(167, 139, 250, 0.5) !important;
+    border-bottom: 1px solid rgba(167, 139, 250, 0.5) !important;
     box-shadow:
         0 8px 20px rgba(108, 40, 217, 0.66),
         0 4px 8px rgba(37, 162, 235, 0.694),
-        inset 0 1px 0 rgba(216, 180, 254, 0.632);
+        inset 0 1px 0 rgba(216, 180, 254, 0.632) !important;
 }
+
 /* ===== FOOTER ===== */
 .footer {
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8) !important;
     font-size: 14px;
     font-weight: 300;
 }
@@ -296,95 +289,76 @@ body::before {
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-/* Para tablets */
 @media (max-width: 768px) {
     .profile-card {
         padding: 24px;
         margin: 10px;
     }
-    
     .profile-name {
         font-size: 24px;
     }
-    
     .profile-lastname {
         font-size: 20px;
     }
-    
     .skills-container {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 12px;
     }
-    
     .skill-item {
         padding: 12px;
     }
 }
 
-/* Para móviles */
 @media (max-width: 480px) {
     body {
         padding: 10px;
     }
-    
     .profile-card {
         padding: 20px;
         border-radius: 16px;
     }
-    
     .profile-image {
         width: 100px;
         height: 100px;
     }
-    
     .profile-name {
         font-size: 22px;
     }
-    
     .profile-lastname {
         font-size: 18px;
     }
-    
     .section-title {
         font-size: 18px;
     }
-    
     .skills-container {
         grid-template-columns: 1fr;
         gap: 10px;
     }
-    
     .skill-item {
         padding: 10px;
     }
-    
     .favorite-item {
         font-size: 14px;
         padding: 10px 12px;
     }
 }
 
-/* Para pantallas muy pequeñas */
 @media (max-width: 320px) {
     .profile-card {
         padding: 16px;
     }
-    
     .profile-image {
         width: 80px;
         height: 80px;
     }
-    
     .profile-name {
         font-size: 20px;
     }
-    
     .profile-lastname {
         font-size: 16px;
     }
 }
 
-/* ===== MEJORAS DE ACCESIBILIDAD ===== */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
@@ -392,32 +366,3 @@ body::before {
         transition-duration: 0.01ms !important;
     }
 }
-
-/* ===== ESTILOS PARA MODO OSCURO (OPCIONAL) ===== */
-@media (prefers-color-scheme: dark) {
-    .profile-card {
-        background: rgba(30, 30, 30, 0.95);
-        color: #fff;
-    }
-    
-    .profile-name {
-        color: #64b5f6;
-    }
-    
-    .profile-lastname {
-        color: #e0e0e0;
-    }
-    
-    .profile-details p {
-        color: #b0b0b0;
-    }
-    
-    .favorite-item {
-        background: #424242;
-        color: #e0e0e0;
-    }
-    
-    .favorite-item:hover {
-        background: #616161;
-    }
-} 

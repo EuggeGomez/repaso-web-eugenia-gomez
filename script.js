@@ -266,4 +266,4 @@ function enableDarkMode() {
 function enableLightMode() {
     document.body.removeAttribute('data-theme');
     localStorage.setItem('theme', 'light');
-} 
+}

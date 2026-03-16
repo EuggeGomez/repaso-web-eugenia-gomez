@@ -191,7 +191,6 @@ body::before {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 16px;
 }
-
 .skill-item {
     background: rgba(192, 97, 250, 0.064);
     backdrop-filter: blur(10px);
@@ -205,7 +204,6 @@ body::before {
         0 4px 12px rgba(4, 45, 79, 0.454),
         inset 0 1px 0 rgba(147, 196, 253, 0.731);
 }
-
 .skill-item:hover {
     transform: translateY(-2px);
     background: linear-gradient(135deg,
